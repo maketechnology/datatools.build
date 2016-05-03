@@ -14,8 +14,27 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<repositories>
+		<repository>
+		   <id>eclipse-neon</id>
+		   <url>http://download.eclipse.org/eclipse/updates/4.6milestones/S-4.6M6-201603170200</url>
+		   <layout>p2</layout>
+		</repository>
+		<repository>
+		   <id>orbit</id>
+		   <url>http://download.eclipse.org/tools/orbit/downloads/drops/S20160308060251/repository</url>
+		   <layout>p2</layout>
+		</repository>
+		<repository>
+		   <id>rap</id>
+		   <url>http://download.eclipse.org/rt/rap/3.0/</url>
+		   <layout>p2</layout>
+		</repository>
+	</repositories>
+
 	<modules>
 		<module>../../../org.eclipse.datatools.modelbase/releng/org.eclipse.datatools.modelbase.releng</module>
+		<module>../org.eclipse.datatools.repository</module>
 	</modules>
 
 	<build>
