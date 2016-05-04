@@ -79,6 +79,16 @@
 				              	<id>org.eclipse.rap.feature</id>
 				              	<versionRange>0.0.0</versionRange>
 				            </requirement>
+				            <requirement>
+				              	<type>eclipse-feature</type>
+				              	<id>org.eclipse.rap.cnf.feature</id>
+				              	<versionRange>0.0.0</versionRange>
+				            </requirement>
+							<requirement>
+				              	<type>eclipse-feature</type>
+				              	<id>org.eclipse.rap.tabbed-properties.feature</id>
+				              	<versionRange>0.0.0</versionRange>
+				            </requirement>
 			          	</extraRequirements>
 		        	</dependency-resolution>
 					<target>
