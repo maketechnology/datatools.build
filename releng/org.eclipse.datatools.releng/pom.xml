@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<repositories>
+	<!--repositories>
 		<repository>
 		   <id>eclipse-neon</id>
 		   <url>http://download.eclipse.org/eclipse/updates/4.6milestones/S-4.6M6-201603170200</url>
@@ -30,10 +30,29 @@
 		   <url>http://download.eclipse.org/rt/rap/3.0/</url>
 		   <layout>p2</layout>
 		</repository>
-	</repositories>
+		<repository>
+		   <id>rap-cnf</id>
+		   <url>http://download.eclipse.org/rt/rap/incubator/nightly/cnf/</url>
+		   <layout>p2</layout>
+		</repository>
+		<repository>
+		   <id>rap-tabbed-properties</id>
+		   <url>http://download.eclipse.org/rt/rap/incubator/nightly/tabbed-properties/</url>
+		   <layout>p2</layout>
+		</repository>
+	</repositories-->
 
 	<modules>
+		<module>../org.eclipse.datatools.targetplatform</module>
+		
 		<module>../../../org.eclipse.datatools.modelbase/releng/org.eclipse.datatools.modelbase.releng</module>
+		<module>../../../org.eclipse.datatools.connectivity/releng/org.eclipse.datatools.connectivity.releng</module>
+		<module>../../../org.eclipse.datatools.sqltools/releng/org.eclipse.datatools.sqltools.releng</module>
+		<module>../../../org.eclipse.datatools.doc/releng/org.eclipse.datatools.doc.releng</module>
+		<module>../../../org.eclipse.datatools.enablement.msft/releng/org.eclipse.datatools.enablement.msft.releng</module>
+		<module>../../../org.eclipse.datatools.enablement.oracle/releng/org.eclipse.datatools.enablement.oracle.releng</module>
+
+		<module>../../features/org.eclipse.datatools.rap.feature</module>
 		<module>../org.eclipse.datatools.repository</module>
 	</modules>
 
@@ -44,6 +63,32 @@
 				<artifactId>tycho-maven-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+				 	<resolver>p2</resolver>
+				  	<dependency-resolution>
+		            	<optionalDependencies>ignore</optionalDependencies>
+			        	<extraRequirements>
+				            <requirement>
+				              	<type>eclipse-feature</type>
+				              	<id>org.eclipse.rap.feature</id>
+				              	<versionRange>0.0.0</versionRange>
+				            </requirement>
+			          	</extraRequirements>
+		        	</dependency-resolution>
+					<target>
+				    	<artifact>
+				      		<groupId>${project.groupId}</groupId>
+				      		<artifactId>org.eclipse.datatools.targetplatform</artifactId>
+				      		<version>1.13.0-SNAPSHOT</version>
+				    	</artifact>
+				  	</target>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

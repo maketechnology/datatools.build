@@ -1,2 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<units size='0'/>
+<units size='1'>
+  <unit id='201605041540.Default' version='1.0.0.27O-cLcmQ67735E3C3A5CA3'>
+    <properties size='3'>
+      <property name='org.eclipse.equinox.p2.name' value='Uncategorized'/>
+      <property name='org.eclipse.equinox.p2.description' value='Default category for otherwise uncategorized features'/>
+      <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='201605041540.Default' version='1.0.0.27O-cLcmQ67735E3C3A5CA3'/>
+    </provides>
+    <requires size='1'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.datatools.rap.feature.feature.group' range='[1.13.0.201605041540,1.13.0.201605041540]'/>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+</units>
