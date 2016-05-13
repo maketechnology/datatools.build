@@ -159,19 +159,19 @@
          version="0.0.0"
          unpack="false"/-->
 
-   <!--plugin
+   <plugin
          id="org.eclipse.datatools.sqltools.result.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/-->
+         unpack="false"/>
 
-   <!--plugin
+   <plugin
          id="org.eclipse.datatools.sqltools.common.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/-->
+         unpack="false"/>
 
 
    <!-- ########################## SQL Tools DDLGEN Feature ########################## -->
