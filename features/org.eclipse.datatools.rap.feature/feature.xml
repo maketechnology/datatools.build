@@ -18,6 +18,13 @@
       %license
    </license>
 
+   <plugin
+         id="org.eclipse.ui.ide"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+         
    <!-- ########################## Model Base ########################## -->
 
    <!--requires>
@@ -31,12 +38,12 @@
          version="0.0.0"
          unpack="false"/>
 
-   <!--plugin
+   <plugin
          id="org.eclipse.datatools.modelbase.sql.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/-->
+         unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.modelbase.sql.query"
@@ -45,12 +52,12 @@
          version="0.0.0"
          unpack="false"/>
 
-   <!--plugin
+   <plugin
          id="org.eclipse.datatools.modelbase.sql.query.edit"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/-->
+         unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.modelbase.sql.xml.query"
@@ -69,12 +76,12 @@
 
    <!-- ########################## Connectivity ########################## -->
 
-   <!--plugin
+   <plugin
          id="org.eclipse.datatools.connectivity.sqm.core.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/-->
+         unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.connectivity.sqm.core"
@@ -83,12 +90,12 @@
          version="0.0.0"
          unpack="false"/>
 
-   <!--plugin
+   <plugin
          id="org.eclipse.datatools.connectivity.sqm.server.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/-->
+		 unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.connectivity.ui.dse"
@@ -117,6 +124,20 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/-->
+
+   <plugin
+         id="org.eclipse.datatools.connectivity.db.generic"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.datatools.connectivity.db.generic.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
    <plugin
          id="org.eclipse.datatools.connectivity.dbdefinition.genericJDBC"
