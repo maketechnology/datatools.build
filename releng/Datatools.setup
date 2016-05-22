@@ -5,12 +5,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
     xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
-    xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:setup.targlets="http://www.eclipse.org/oomph/setup/targlets/1.0"
     xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
     name="datatools"
     label="datatools">
   <setupTask
@@ -229,6 +228,8 @@
       <requirement
           name="org.eclipse.rap.tabbed-properties.feature.feature.group"/>
       <requirement
+          name="org.eclipse.rap.gef.feature.feature.group"/>
+      <requirement
           name="org.eclipse.emf.rap.feature.group"/>
       <requirement
           name="org.eclipse.emf.ecore.feature.group"/>
@@ -240,6 +241,8 @@
           name="org.apache.lucene.core"/>
       <requirement
           name="net.sourceforge.lpg.lpgjavaruntime"/>
+      <requirement
+          name="org.eclipse.datatools.rap.feature.feature.group"/>
       <sourceLocator
           rootFolder="${dtp.build.git.clone.location}"
           locateNestedProjects="true"/>
@@ -271,6 +274,8 @@
             url="http://download.eclipse.org/rt/rap/incubator/nightly/cnf"/>
         <repository
             url="http://download.eclipse.org/rt/rap/incubator/nightly/tabbed-properties"/>
+        <repository
+            url="http://download.eclipse.org/rt/rap/incubator/nightly/gef"/>
         <repository
             url="http://download.eclipse.org/modeling/emf/emf/updates/2.12milestones/core/S201603210508"/>
       </repositoryList>
@@ -315,14 +320,7 @@
   <setupTask
       xsi:type="setup.workingsets:WorkingSetTask">
     <workingSet
-        name="${scope.project.name}">
-      <predicate
-          xsi:type="predicates:AndPredicate">
-        <operand
-            xsi:type="predicates:RepositoryPredicate"
-            project="org.eclipse.datatools.rap-feature"/>
-      </predicate>
-    </workingSet>
+        name="connectivity"/>
     <description>The dynamic working sets for ${scope.project.label}</description>
   </setupTask>
   <stream name="master"
