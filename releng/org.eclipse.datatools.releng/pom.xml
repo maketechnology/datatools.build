@@ -132,6 +132,11 @@
 				              	<id>org.eclipse.emf.rap.edit.ui</id>
 				              	<versionRange>0.0.0</versionRange>
 				            </requirement>
+				            <requirement>
+				              	<type>eclipse-plugin</type>
+				              	<id>org.eclipse.core.resources</id>
+				              	<versionRange>0.0.0</versionRange>
+				            </requirement>
 			          	</extraRequirements>
 		        	</dependency-resolution>
 					<!--target>
