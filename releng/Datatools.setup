@@ -231,7 +231,7 @@
       <requirement
           name="org.eclipse.rap.gef.feature.feature.group"/>
       <requirement
-          name="org.eclipse.emf.rap.feature.group"/>
+          name="org.eclipse.emf.rap.sdk.feature.group"/>
       <requirement
           name="org.eclipse.emf.ecore.feature.group"/>
       <requirement
