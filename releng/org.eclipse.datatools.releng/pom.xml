@@ -114,7 +114,7 @@
 				    </filters>
 				  	<dependency-resolution>
 		            	<optionalDependencies>ignore</optionalDependencies>
-			        	<!--extraRequirements>
+			        	<extraRequirements>
 				            <requirement>
 				              	<type>eclipse-feature</type>
 				              	<id>org.eclipse.rap.feature</id>
@@ -130,17 +130,17 @@
 				              	<id>org.eclipse.rap.tabbed-properties.feature</id>
 				              	<versionRange>0.0.0</versionRange>
 				            </requirement>
-				            <requirement>
+				            <!--requirement>
 				              	<type>eclipse-feature</type>
 				              	<id>org.eclipse.emf.rap.sdk</id>
 				              	<versionRange>0.0.0</versionRange>
-				            </requirement>
+				            </requirement-->
 				            <requirement>
 				              	<type>eclipse-feature</type>
 				              	<id>org.eclipse.rap.gef.feature</id>
 				              	<versionRange>0.0.0</versionRange>
 				            </requirement>
-			          	</extraRequirements-->
+			          	</extraRequirements>
 		        	</dependency-resolution>
 					<!--target>
 				    	<artifact>
