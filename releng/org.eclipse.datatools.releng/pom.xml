@@ -97,20 +97,12 @@
 				        </filter>
 				        <!--filter>
 				            <type>java-package</type>
-				            <id>org.eclipse.swt</id>
-				            <restrictTo>
-				               <type>eclipse-plugin</type>
-				               <id>org.eclipse.rap.rwt</id>
-				            </restrictTo>
-				        </filter-->
-				        <filter>
-				            <type>java-package</type>
 				            <id>org.eclipse.jface</id>
 				            <restrictTo>
 				               <type>eclipse-plugin</type>
 				               <id>org.eclipse.rap.jface</id>
 				            </restrictTo>
-				        </filter>
+				        </filter-->
 				    </filters>
 				  	<dependency-resolution>
 		            	<optionalDependencies>ignore</optionalDependencies>
@@ -130,11 +122,11 @@
 				              	<id>org.eclipse.rap.tabbed-properties.feature</id>
 				              	<versionRange>0.0.0</versionRange>
 				            </requirement>
-				            <!--requirement>
+				            <requirement>
 				              	<type>eclipse-feature</type>
-				              	<id>org.eclipse.emf.rap.sdk</id>
+				              	<id>org.eclipse.emf.rap</id>
 				              	<versionRange>0.0.0</versionRange>
-				            </requirement-->
+				            </requirement>
 				            <requirement>
 				              	<type>eclipse-feature</type>
 				              	<id>org.eclipse.rap.gef.feature</id>
