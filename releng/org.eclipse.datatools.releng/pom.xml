@@ -81,7 +81,15 @@
 				        <!-- example 2: remove all providers of the package javax.persistence except the bundle javax.persistence -->
 				        <filter>
 				            <type>java-package</type>
-				            <id>com.ibm.icu</id>
+				            <id>com.ibm.icu.text</id>
+				            <restrictTo>
+				               <type>eclipse-plugin</type>
+				               <id>com.ibm.icu</id>
+				            </restrictTo>
+				        </filter>
+				        <filter>
+				            <type>java-package</type>
+				            <id>com.ibm.icu.util</id>
 				            <restrictTo>
 				               <type>eclipse-plugin</type>
 				               <id>com.ibm.icu</id>
