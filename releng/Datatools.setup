@@ -5,11 +5,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
     xmlns:jdt="http://www.eclipse.org/oomph/setup/jdt/1.0"
+    xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
     xmlns:setup.targlets="http://www.eclipse.org/oomph/setup/targlets/1.0"
     xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
-    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/setup/jdt/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/targlets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupTarglets.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
     name="datatools"
     label="datatools">
   <setupTask
@@ -243,6 +244,10 @@
           name="net.sourceforge.lpg.lpgjavaruntime"/>
       <requirement
           name="org.eclipse.datatools.rap.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.datatools.connectivity.sqm.core.ui"/>
+      <requirement
+          name="org.eclipse.datatools.connectivity.sqm.server.ui"/>
       <sourceLocator
           rootFolder="${dtp.build.git.clone.location}"
           locateNestedProjects="true"/>
@@ -318,9 +323,35 @@
     </targlet>
   </setupTask>
   <setupTask
-      xsi:type="setup.workingsets:WorkingSetTask">
+      xsi:type="setup.workingsets:WorkingSetTask"
+      id="wsets">
     <workingSet
-        name="connectivity"/>
+        name="features">
+      <predicate
+          xsi:type="predicates:NamePredicate"
+          pattern="org.eclipse.datatools.rap.feature.*"/>
+    </workingSet>
+    <workingSet
+        name="connectivity"
+        id="">
+      <predicate
+          xsi:type="predicates:NamePredicate"
+          pattern="org.eclipse.datatools.connectivity.*"/>
+    </workingSet>
+    <workingSet
+        name="modelbase"
+        id="">
+      <predicate
+          xsi:type="predicates:NamePredicate"
+          pattern="org.eclipse.datatools.modelbase.*"/>
+    </workingSet>
+    <workingSet
+        name="sqltools"
+        id="">
+      <predicate
+          xsi:type="predicates:NamePredicate"
+          pattern="org.eclipse.datatools.sqltools.*"/>
+    </workingSet>
     <description>The dynamic working sets for ${scope.project.label}</description>
   </setupTask>
   <stream name="master"
