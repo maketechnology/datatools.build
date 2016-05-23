@@ -96,6 +96,11 @@
 				            </requirement>
 				            <requirement>
 				              	<type>eclipse-feature</type>
+				              	<id>org.eclipse.emf.rap</id>
+				              	<versionRange>0.0.0</versionRange>
+				            </requirement>
+				            <requirement>
+				              	<type>eclipse-feature</type>
 				              	<id>org.eclipse.rap.gef.feature</id>
 				              	<versionRange>0.0.0</versionRange>
 				            </requirement>
