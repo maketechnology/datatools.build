@@ -95,10 +95,26 @@
 				               <id>com.ibm.icu</id>
 				            </restrictTo>
 				        </filter>
+				        <!--filter>
+				            <type>java-package</type>
+				            <id>org.eclipse.swt</id>
+				            <restrictTo>
+				               <type>eclipse-plugin</type>
+				               <id>org.eclipse.rap.rwt</id>
+				            </restrictTo>
+				        </filter-->
+				        <filter>
+				            <type>java-package</type>
+				            <id>org.eclipse.jface</id>
+				            <restrictTo>
+				               <type>eclipse-plugin</type>
+				               <id>org.eclipse.rap.jface</id>
+				            </restrictTo>
+				        </filter>
 				    </filters>
-				  	<!--dependency-resolution>
+				  	<dependency-resolution>
 		            	<optionalDependencies>ignore</optionalDependencies>
-			        	<extraRequirements>
+			        	<!--extraRequirements>
 				            <requirement>
 				              	<type>eclipse-feature</type>
 				              	<id>org.eclipse.rap.feature</id>
@@ -124,9 +140,9 @@
 				              	<id>org.eclipse.rap.gef.feature</id>
 				              	<versionRange>0.0.0</versionRange>
 				            </requirement>
-			          	</extraRequirements>
+			          	</extraRequirements-->
 		        	</dependency-resolution>
-					<target>
+					<!--target>
 				    	<artifact>
 				      		<groupId>${project.groupId}</groupId>
 				      		<artifactId>org.eclipse.datatools.targetplatform</artifactId>
