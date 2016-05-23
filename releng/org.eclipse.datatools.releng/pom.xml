@@ -77,6 +77,17 @@
 				<version>${tycho-version}</version>
 				<configuration>
 				 	<resolver>p2</resolver>
+				 	<filters>
+				        <!-- example 2: remove all providers of the package javax.persistence except the bundle javax.persistence -->
+				        <filter>
+				            <type>java-package</type>
+				            <id>com.ibm.icu</id>
+				            <restrictTo>
+				               <type>eclipse-plugin</type>
+				               <id>com.ibm.icu</id>
+				            </restrictTo>
+				        </filter>
+				    </filters>
 				  	<!--dependency-resolution>
 		            	<optionalDependencies>ignore</optionalDependencies>
 			        	<extraRequirements>
