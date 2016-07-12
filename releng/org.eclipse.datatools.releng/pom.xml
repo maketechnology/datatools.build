@@ -58,7 +58,7 @@
 		<module>../../../${prefix}.enablement.msft/releng/org.eclipse.datatools.enablement.msft.releng</module>
 		<module>../../../${prefix}.enablement.mysql/releng/org.eclipse.datatools.enablement.mysql.releng</module>
 		<module>../../../${prefix}.enablement.oracle/releng/org.eclipse.datatools.enablement.oracle.releng</module>
-		<module>../../../${prefix}.enablement.oracle/releng/org.eclipse.datatools.enablement.ibm.releng</module>
+		<module>../../../${prefix}.enablement.ibm/releng/org.eclipse.datatools.enablement.ibm.releng</module>
 
 		<module>../../features/org.eclipse.datatools.rap.feature</module>
 		<module>../org.eclipse.datatools.repository</module>
